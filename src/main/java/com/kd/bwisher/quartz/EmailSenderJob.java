@@ -1,4 +1,4 @@
-package com.impetus.bwisher.quartz;
+package com.kd.bwisher.quartz;
 
 import java.io.IOException;
 import java.util.Date;
@@ -13,10 +13,10 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.impetus.bwisher.beans.EmailNotificationService;
-import com.impetus.bwisher.beans.PivotService;
-import com.impetus.bwisher.beans.config.ConfigBeans;
-import com.impetus.bwisher.helper.EmailHelper;
+import com.kd.bwisher.beans.EmailNotificationService;
+import com.kd.bwisher.beans.PivotService;
+import com.kd.bwisher.beans.config.ConfigBeans;
+import com.kd.bwisher.helper.EmailHelper;
 
 @Service
 public class EmailSenderJob implements Job {

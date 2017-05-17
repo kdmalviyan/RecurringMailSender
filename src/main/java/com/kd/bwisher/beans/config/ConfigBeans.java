@@ -1,4 +1,4 @@
-package com.impetus.bwisher.beans.config;
+package com.kd.bwisher.beans.config;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -34,10 +34,10 @@ public class ConfigBeans {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
 		// Using gmail.
-		mailSender.setHost("server-020.impetus.co.in");
+		mailSender.setHost("Server");
 		mailSender.setPort(25);
-		mailSender.setUsername("BDappTest@server-020.impetus.co.in");
-		mailSender.setPassword("9c-qxGJy");
+		mailSender.setUsername("username");
+		mailSender.setPassword("password");
 
 		Properties javaMailProperties = new Properties();
 		javaMailProperties.put("mail.smtp.auth", "true");

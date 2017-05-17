@@ -1,4 +1,4 @@
-package com.impetus;
+package com.kd.example;
 
 import java.util.Date;
 
@@ -15,10 +15,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.impetus.bwisher.quartz.EmailSenderJob;
+import com.kd.bwisher.quartz.EmailSenderJob;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.impetus" })
+@ComponentScan(basePackages = { "com.kd" })
 public class BirthDayWisher {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(BirthDayWisher.class, args);

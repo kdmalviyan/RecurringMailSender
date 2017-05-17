@@ -1,4 +1,4 @@
-package com.impetus.bwisher.helper;
+package com.kd.bwisher.helper;
 
 import java.io.File;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.impetus.bwisher.beans.BirthdayEmail;
+import com.kd.bwisher.beans.BirthdayEmail;
 
 public class EmailHelper {
 	public static MimeMessagePreparator getMessagePreparator(VelocityEngine velocityEngine,

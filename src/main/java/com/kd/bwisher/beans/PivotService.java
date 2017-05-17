@@ -1,4 +1,4 @@
-package com.impetus.bwisher.beans;
+package com.kd.bwisher.beans;
 
 import java.util.Date;
 
@@ -14,13 +14,12 @@ public class PivotService {
 		node1.put("emailId", "sunil.gupta@impetus.co.in");
 		node1.put("name", "Kuldeep Singh");
 		node1.put("picUrl", "https://pivot.impetus.co.in/digite/upload/kuldeep.singh.jpg");
-		/*
-		 * ObjectNode node2 = mapper.createObjectNode(); node2.put("emailId",
-		 * "sunil.gupta@impetus.co.in"); node2.put("name", "Sunil Gupta");
-		 * node2.put("picUrl",
-		 * "http://www.impetus.com/sites/default/files/Praveen_leadership_0.png"
-		 * );
-		 */
+
+		ObjectNode node2 = mapper.createObjectNode();
+		node2.put("emailId", "sunil.gupta@impetus.co.in");
+		node2.put("name", "Sunil Gupta");
+		node2.put("picUrl", "http://www.impetus.com/sites/default/files/Praveen_leadership_0.png");
+
 		ArrayNode jsonNode = mapper.createArrayNode();
 		jsonNode.add(node1);
 		// jsonNode.add(node2);

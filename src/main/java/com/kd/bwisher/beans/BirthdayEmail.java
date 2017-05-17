@@ -1,4 +1,4 @@
-package com.impetus.bwisher.beans;
+package com.kd.bwisher.beans;
 
 public class BirthdayEmail {
 	private String templateName;
