@@ -8,17 +8,16 @@ import javax.mail.internet.MimeMessage;
 
 import org.apache.commons.lang.math.RandomUtils;
 import org.apache.velocity.app.VelocityEngine;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.kd.bwisher.beans.BirthdayEmail;
+import com.kd.bwisher.beans.Employee;
 
 public class EmailHelper {
 	public static MimeMessagePreparator getMessagePreparator(VelocityEngine velocityEngine,
-			final BirthdayEmail birthdayEmail) {
+			final Employee birthdayEmail) {
 
 		MimeMessagePreparator preparator = new MimeMessagePreparator() {
 			public void prepare(MimeMessage mimeMessage) throws Exception {
@@ -29,8 +28,6 @@ public class EmailHelper {
 				Map<String, Object> model = new HashMap<>();
 				model.put("name", birthdayEmail.getName());
 				model.put("picUrl", birthdayEmail.getPicUrl());
-				model.put("image", new ClassPathResource("mail/templates/images/birthday_01.jpg"));
-				messageHelper.addInline("image", new ClassPathResource("mail/templates/images/birthday_01.jpg"));
 				messageHelper.setText(geVelocityTemplateContent(velocityEngine, model, birthdayEmail.getTemplateName()),
 						true);
 			}
@@ -50,8 +47,8 @@ public class EmailHelper {
 		return "";
 	}
 
-	public static BirthdayEmail prepareBirthDayEmail(JsonNode employee) {
-		BirthdayEmail birthdayEmail = new BirthdayEmail();
+	public static Employee prepareBirthDayEmail(JsonNode employee) {
+		Employee birthdayEmail = new Employee();
 		birthdayEmail.setEmailId(employee.get("emailId").asText());
 		birthdayEmail.setName(employee.get("name").asText());
 		birthdayEmail.setPicUrl(employee.get("picUrl").asText());

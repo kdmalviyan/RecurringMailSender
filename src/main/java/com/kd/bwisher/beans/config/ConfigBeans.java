@@ -34,10 +34,10 @@ public class ConfigBeans {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
 		// Using gmail.
-		mailSender.setHost("Server");
+		mailSender.setHost("server-020.impetus.co.in");
 		mailSender.setPort(25);
-		mailSender.setUsername("username");
-		mailSender.setPassword("password");
+		mailSender.setUsername("BDappTest@server-020.impetus.co.in");
+		mailSender.setPassword("9c-qxGJy");
 
 		Properties javaMailProperties = new Properties();
 		javaMailProperties.put("mail.smtp.auth", "true");

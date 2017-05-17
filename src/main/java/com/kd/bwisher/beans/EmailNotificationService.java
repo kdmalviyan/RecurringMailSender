@@ -20,7 +20,7 @@ public class EmailNotificationService {
 		this.velocityEngine = velocityEngine;
 	}
 
-	public void sendEmail(BirthdayEmail birthdayEmail) {
+	public void sendEmail(Employee birthdayEmail) {
 
 		MimeMessagePreparator preparator = EmailHelper.getMessagePreparator(velocityEngine, birthdayEmail);
 		try {

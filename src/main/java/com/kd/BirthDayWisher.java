@@ -1,4 +1,4 @@
-package com.kd.example;
+package com.kd;
 
 import java.util.Date;
 
@@ -29,18 +29,18 @@ public class BirthDayWisher {
 	private static void ScheduleJob() throws SchedulerException, InterruptedException {
 		SchedulerFactory schedulerFactory = new StdSchedulerFactory();
 		Scheduler sched = schedulerFactory.getScheduler();
-		JobDetail job = JobBuilder.newJob(EmailSenderJob.class).withIdentity("job1", "group1").build();
+		JobDetail job = JobBuilder.newJob(EmailSenderJob.class).withIdentity("job", "group").build();
 		// Daily
 		/*
 		 * Trigger trigger =
-		 * TriggerBuilder.newTrigger().withIdentity("trigger1", "group1")
+		 * TriggerBuilder.newTrigger().withIdentity("trigger", "group")
 		 * .withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(7,
 		 * 0)).startAt(new Date()).build();
 		 */
 
 		// Every 60 sec
-		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "group1")
-				.withSchedule(CronScheduleBuilder.cronSchedule("0/60 * * * * ?")).startAt(new Date()).build();
+		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger", "group")
+				.withSchedule(CronScheduleBuilder.cronSchedule("0/20 * * * * ?")).startAt(new Date()).build();
 
 		sched.scheduleJob(job, trigger);
 		sched.start();

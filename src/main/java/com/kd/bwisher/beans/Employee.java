@@ -1,6 +1,6 @@
 package com.kd.bwisher.beans;
 
-public class BirthdayEmail {
+public class Employee {
 	private String templateName;
 	private String name;
 	private String picUrl;
