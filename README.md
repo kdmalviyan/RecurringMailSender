@@ -1,0 +1,4 @@
+# RecurringMailSender
+
+Mail Sender
+Quartz
