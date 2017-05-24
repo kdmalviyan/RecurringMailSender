@@ -1,0 +1,23 @@
+<html>
+	<body style="background-color: lightblue;">
+		<div id="username">
+			<h4>Dear <b>${name}</b></h4>
+		</div>
+		<div id="profile-pic">
+			<img src=${picUrl}>
+		<div>
+		<div style="width: 270px;">
+			<p><h3>On your special day, We wish you good luck, & hope this wonderful day will fill up your heart with joy and blessings. Have a fantastic birthday..
+Happy Birthday!!</h3>
+			</p>
+		</div>
+	</body>
+</html>
+
+<style>
+
+#x_profile-pic > img {
+    height: 250px;
+    width: 200px;
+}
+</style>
